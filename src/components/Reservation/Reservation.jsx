@@ -3,6 +3,8 @@ import './reservation.css'
 import { toast } from 'react-toastify'
 
 const Reservation = () => {
+  // Test
+  const minToday = new Date().toISOString().slice(0, 10)
   // Date Input
   const todayDate = new Date()
   const formatDate =
@@ -61,7 +63,8 @@ const Reservation = () => {
             type="date"
             id="start"
             name="start"
-            min={valueDate}
+            min={minToday}
+            // min={valueDate}
             value={valueDate}
             onChange={(e) => setValueDate(e.target.value)}
             required
