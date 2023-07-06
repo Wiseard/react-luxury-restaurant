@@ -8,9 +8,9 @@ const Reservation = () => {
   const formatDate =
     todayDate.getDate() < 10 ? `0${todayDate.getDate()}` : todayDate.getDate()
   const formatMonth =
-    todayDate.getMonth() < 10
-      ? `0${todayDate.getMonth()}`
-      : todayDate.getMonth()
+    todayDate.getMonth() + 1 < 10
+      ? `0${todayDate.getMonth() + 1}`
+      : todayDate.getMonth() + 1
   const formattedDate = [todayDate.getFullYear(), formatMonth, formatDate].join(
     '-'
   )
