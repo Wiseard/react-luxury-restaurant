@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+:root {
+  /* === Font Size and Typography === */
+  --body-font: 'Overpass', sans-serif;
+  --cursive-font: 'Tangerine', cursive;
+
+  --h1-font-size: 3.25rem;
+  --h2-font-size: 2.5rem;
+  --h3-font-size: 2.25rem;
+  --h4-font-size: 2rem;
+  --subtitle-font-size: 1.5rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+
+  /* === Font Weight === */
+  --font-thin: 100;
+  --font-extraLight: 200;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* === Colors === */
+  --color-white: #fff;
+  --color-golden: #b7882d;
+  --color-black: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(204, 204, 204, 0.114);
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-semibold);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+main {
+  width: 100vw;
+}
+
+/* ========= Reusable CSS Classes ========= */
+
+.container {
+  max-width: 1000px;
+  padding-bottom: 6rem;
+  padding-top: 6rem;
+  margin: 0 auto;
+}
+
+.section {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.flex__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  font-family: var(--cursive-font);
+  margin-left: 0.875rem;
+  font-weight: var(--font-bold);
+  position: relative;
+  margin-bottom: 3.75rem;
+}
+
+.section__title > span {
+  color: var(--color-golden);
+}
+
+.btn-link:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+@media screen and (max-width: 2000px) {
+}
+
+@media screen and (max-width: 1150px) {
+  .section__title {
+    text-align: center;
+  }
+  .section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 650px) {
+}

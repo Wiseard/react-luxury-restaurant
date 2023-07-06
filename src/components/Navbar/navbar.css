@@ -1,0 +1,224 @@
+.nav {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.nav__bg {
+  /* background-color: black; */
+  background: url('../../assets/images/reservation-bg.jpeg');
+}
+
+.nav__center {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  transition: 0.3s ease-out;
+}
+
+.nav__center-logo {
+  width: 150px;
+  cursor: pointer;
+}
+.nav__center__links,
+.nav__center__socials {
+  color: white;
+  display: flex;
+  list-style-type: none;
+}
+
+.nav__center__links li:hover,
+.nav__center__socials li:hover,
+.nav__center__smallscreen__container__links li:hover {
+  color: var(--color-golden);
+}
+
+.nav__center__links li {
+  margin: 0 1rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 0.3s;
+  letter-spacing: 1px;
+  font-size: var(--small-font-size);
+}
+.nav__center__socials li {
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: var(--normal-font-size);
+}
+
+/* === RESPONSIVE MENU === */
+
+/* Open Menu Icon */
+
+.btn__openMenu {
+  border-color: transparent;
+  background-color: transparent;
+  font-size: var(--subtitle-font-size);
+  display: none;
+}
+
+.btn__openMenu-icon {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.btn__openMenu-icon:hover {
+  color: var(--color-golden);
+  transform: rotate(90deg);
+}
+
+/* Close Menu Icon */
+
+.btn__closeMenu {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  border-color: transparent;
+  background-color: transparent;
+  font-size: var(--subtitle-font-size);
+  display: block;
+}
+
+.btn__closeMenu-icon {
+  color: var(--color-white);
+  transition: 0.3s;
+}
+
+.btn__closeMenu-icon:hover {
+  color: var(--color-golden);
+}
+
+/* Logo */
+
+.nav__center__smallscreen__container .nav__center__homelink {
+  top: 1.5rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: -10rem;
+}
+
+.nav__center__smallscreen__container .nav__center__homelink img {
+  width: 300px;
+}
+
+/* Menu Container */
+
+.nav__center__smallscreen__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url('../../assets/images/reservation-bg.jpeg');
+  /* background-color: var(--color-black); */
+  transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  transform: translateY(-100%);
+}
+
+.show__smallscreen__container {
+  transform: translateY(0);
+}
+
+/* Menu Links */
+
+.nav__center__smallscreen__container__links {
+  flex-direction: column;
+  list-style-type: none;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.nav__center__smallscreen__container__links li {
+  transition: 0.3s;
+  position: relative;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin: 1rem 0;
+  color: var(--color-white);
+  font-family: var(--cursive-font);
+  font-size: var(--h2-font-size);
+}
+
+.nav__center__smallscreen__container__links
+  li:hover
+  .nav__center__smallscreen__container-underline {
+  width: 50px;
+}
+
+.nav__center__smallscreen__container__link a span {
+  color: var(--color-golden);
+}
+
+.nav__center__smallscreen__container-underline {
+  width: 0px;
+  height: 2px;
+  background-color: var(--color-golden);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2rem;
+  transition: 0.3s;
+}
+
+/* Menu Social Links */
+
+.nav__center__smallscreen__container .nav__center__socials {
+  margin-bottom: 1.875rem;
+  position: relative;
+}
+
+.nav__center__smallscreen__container .nav__center__socials::before {
+  content: 'Follow us';
+  font-family: var(--cursive-font);
+  font-size: var(--h2-font-size);
+  letter-spacing: 1px;
+  color: var(--color-golden);
+  text-align: center;
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--color-golden);
+}
+
+.nav__center__smallscreen__container .nav__center__socials li {
+  font-size: var(--subtitle-font-size);
+}
+
+@media screen and (max-width: 2000px) {
+}
+
+@media screen and (max-width: 1150px) {
+  .nav__center {
+    width: 100%;
+  }
+
+  .nav__center > .nav__center__links,
+  .nav__center > .nav__center__socials {
+    display: none;
+  }
+
+  .btn__openMenu {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+}

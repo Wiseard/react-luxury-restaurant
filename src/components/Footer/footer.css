@@ -1,0 +1,118 @@
+.footer__container {
+  padding: 5rem 4rem;
+  background: url('../../assets/images/reservation-bg.jpeg');
+  border-top: 1px solid var(--color-golden);
+  position: relative;
+}
+
+.footer__container__info {
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Contact */
+
+.contact__title,
+.hours__title,
+.subscribe__title {
+  margin-bottom: 1.875rem;
+  color: var(--color-white);
+}
+
+.contact__address,
+.contact__mail {
+  color: var(--color-white);
+  font-weight: 200;
+}
+
+.contact__phone {
+  color: var(--color-golden);
+  margin: 1rem 0;
+  font-weight: 200;
+}
+
+/* Hours */
+
+.hours__week,
+.hours__week-end {
+  color: var(--color-golden);
+  font-weight: 200;
+}
+
+.hours__week {
+  margin-bottom: 1.875rem;
+}
+
+/* Form */
+
+.subscribe__form input {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background: #f7f7f7;
+  border: 1px solid var(--color-golden);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 0 20px;
+  color: #999999;
+  font-size: 15px;
+  font-weight: 300;
+  outline: none;
+}
+
+.subscribe__form button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  background-color: transparent;
+  border: 1px solid var(--color-golden);
+  color: var(--color-golden);
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.subscribe__form button:hover {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+/* Copyright */
+
+.footer-copyright {
+  color: var(--color-white);
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 200;
+  font-size: var(--small-font-size);
+  text-align: center;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 2000px) {
+}
+
+@media screen and (max-width: 1150px) {
+  .footer__container__info {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .subscribe__form input,
+  .subscribe__form button {
+    width: 50%;
+    margin: 0 auto 1rem auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  .subscribe__form input,
+  .subscribe__form button {
+    width: 80%;
+  }
+}

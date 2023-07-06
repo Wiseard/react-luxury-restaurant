@@ -1,0 +1,5 @@
+export { default as Header } from './components/Header/Header'
+export { default as About } from './components/About/About'
+export { default as Menu } from './components/Menu/Menu'
+export { default as Reservation } from './components/Reservation/Reservation'
+export { default as Footer } from './components/Footer/Footer'

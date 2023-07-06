@@ -1,0 +1,120 @@
+.reservation__container {
+  background: url('../../assets/images/reservation-bg.jpeg');
+  padding: 4rem;
+  border-top: 1px solid var(--color-golden);
+}
+
+.header {
+  margin: 3rem 0;
+}
+
+.header h2 {
+  color: var(--color-white);
+  margin-bottom: 2rem;
+  font-size: var(--h1-font-size);
+  position: relative;
+  text-align: center;
+}
+
+.header h2::after {
+  content: '';
+  position: absolute;
+  width: 90px;
+  border-bottom: 3px solid var(--color-golden);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header p {
+  color: var(--color-white);
+  font-weight: 500;
+  text-align: center;
+}
+
+.form__guests,
+.form__time {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.875rem;
+}
+
+input#name,
+input#start,
+select#time,
+select#people {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background: #f7f7f7;
+  border: 1px solid var(--color-golden);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 0 30px;
+  color: #999999;
+  font-size: 15px;
+  font-weight: 300;
+  outline: none;
+}
+
+input#start {
+  border-color: green;
+}
+
+.btn-book {
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: 1px solid var(--color-golden);
+  color: var(--color-golden);
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  display: block;
+  margin: 1rem auto;
+}
+
+.btn-book:hover {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+@media screen and (max-width: 2000px) {
+}
+
+@media screen and (max-width: 1150px) {
+  .reservation__container {
+    padding: 2rem;
+  }
+  .reservation__container__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form__guests,
+  .form__time {
+    grid-template-columns: 1fr;
+  }
+
+  input#name,
+  input#start,
+  select#time,
+  select#people {
+    width: 300px;
+  }
+
+  select#time,
+  select#people {
+    height: 3rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header h2 {
+    font-size: var(--h3-font-size);
+  }
+
+  .header h2::after {
+    width: 120px;
+  }
+}
