@@ -14,9 +14,7 @@ const Menu = () => {
   const [menuFiltered, setMenuFiltered] = useState(menu)
 
   function isActive(category) {
-    if (category === 'all' && currentPage !== 1) {
-      setCurrentPage(1)
-    }
+    setCurrentPage(1)
     setCategory(category)
     setActive(category)
     const newMenu = menu.filter((item) => item.category === category)
@@ -56,6 +54,7 @@ const Menu = () => {
   const lastIndex = currentPage * recordsPerPage
   const firstIndex = lastIndex - recordsPerPage
   const records = menuFiltered.slice(firstIndex, lastIndex)
+  // const records = menuFiltered.slice(firstIndex, lastIndex)
   // const records = data.slice(firstIndex, lastIndex)
   const nPage = Math.ceil(menuFiltered.length / recordsPerPage)
   const numbers = [...Array(nPage + 1).keys()].slice(1)
